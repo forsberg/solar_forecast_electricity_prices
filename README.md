@@ -32,28 +32,28 @@ Ensure the [Prerequisites](#prerequisites) (Solar Forecast and Cost Sensors) are
 
 <!-- ### Option 1: HACS
 
-- Follow [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=forsberg&repository=solar_forecast_electricity_prices&category=integration) and install it
+- Follow [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=forsberg&repository=solar_forecast_electricity_price&category=integration) and install it
 - Restart Home Assistant
 
   *or*
 - Go to `HACS` -> `Integrations`,
 - In the top right corner, click on the three dots and choose Custom Repository
-- Add https://github.com/forsberg/solar_forecast_electricity_prices as an Integration Repository
+- Add https://github.com/forsberg/solar_forecast_electricity_price as an Integration Repository
 - Select `+`,
-- Search for `solar forecast electricity prices` and install it,
+- Search for `solar forecast electricity price` and install it,
 - Restart Home Assistant -->
 
 ### Option 2: Manual
 
-Download the [latest release](https://github.com/forsberg/solar_forecast_electricity_prices/releases)
+Download the [latest release](https://github.com/forsberg/solar_forecast_electricity_price/releases)
 
 ```bash
 cd YOUR_HASS_CONFIG_DIRECTORY    # same place as configuration.yaml
 mkdir -p custom_components/solar_forecast_electricity_prices
-cd custom_components/solar_forecast_electricity_prices
-unzip solar-forecast-electricity-prices-X.Y.Z.zip
-mv solar-forecast-electricity-prices-X.Y.Z/custom_components/nordpool/* .
-rm -r solar-forecast-electricity-prices-X.Y.Z
+cd custom_components/solar_forecast_electricity_price
+unzip solar_forecast_electricity_price-X.Y.Z.zip
+mv solar_forecast_electricity_prices-X.Y.Z/custom_components/nordpool/* .
+rm -r solar_forecast_electricity_prices-X.Y.Z
 ```
 
 ## Configuration - this integration
