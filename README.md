@@ -30,9 +30,9 @@ solar panels.
 
 Ensure the [Prerequisites](#prerequisites) (Solar Forecast and Cost Sensors) are fulfilled as detailed below.
 
-<!-- ### Option 1: HACS
+### Option 1: HACS
 
-- Follow [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=forsberg&repository=solar_forecast_electricity_price&category=integration) and install it
+- [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=forsberg&repository=solar_forecast_electricity_price.git)
 - Restart Home Assistant
 
   *or*
@@ -41,7 +41,7 @@ Ensure the [Prerequisites](#prerequisites) (Solar Forecast and Cost Sensors) are
 - Add https://github.com/forsberg/solar_forecast_electricity_price as an Integration Repository
 - Select `+`,
 - Search for `solar forecast electricity price` and install it,
-- Restart Home Assistant -->
+- Restart Home Assistant
 
 ### Option 2: Manual
 
@@ -52,7 +52,7 @@ cd YOUR_HASS_CONFIG_DIRECTORY    # same place as configuration.yaml
 mkdir -p custom_components/solar_forecast_electricity_prices
 cd custom_components/solar_forecast_electricity_price
 unzip solar_forecast_electricity_price-X.Y.Z.zip
-mv solar_forecast_electricity_prices-X.Y.Z/custom_components/nordpool/* .
+mv solar_forecast_electricity_price-X.Y.Z/custom_components/nordpool/* .
 rm -r solar_forecast_electricity_prices-X.Y.Z
 ```
 
@@ -125,6 +125,7 @@ instead be added to `configuration.yaml`
 
 ```yaml
 template:
+  - sensor:
       - name: "Grid Import Cost"
         unique_id: grid_import_cost
         unit_of_measurement: "SEK/kWh"
@@ -167,7 +168,6 @@ template:
               []
             {% endif %}
 
-  - sensor:
       - name: "Grid Export Income per kWh"
         unique_id: grid_export_income
         unit_of_measurement: "SEK/kWh"
